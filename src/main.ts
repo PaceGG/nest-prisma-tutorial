@@ -7,6 +7,8 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.setGlobalPrefix('api');
+
   // Конфигурация Swagger
   const config = new DocumentBuilder()
     .setTitle('NestJS Prisma Tutorial')
